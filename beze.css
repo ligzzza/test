@@ -1,0 +1,67 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color:rgb(109, 181, 253);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh; 
+    margin: 50px;
+
+}
+h1 {
+    color: rgb(0, 27, 50);
+    position: relative;
+}
+p {
+    color: #000000;
+}
+h2 {
+    color: rgb(0, 27, 50);
+}
+h3 {
+    color: rgb(0, 27, 50);
+}
+.history{
+    text-align: justify;
+    font-size: 18px;
+    line-height: 0.9;
+    flex: 1;
+}
+ol{
+    font-size: 18px;
+}
+img + p{
+    margin-top: 10px;
+}
+ol > li{
+    font-style: italic;
+}
+a:hover{
+    color: white;
+}
+div + p{
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+.custom-image {
+    border: 5px dashed #01435d;
+    border-radius: 5px;
+    padding: 5px;
+    width: 320px;
+    height: 250px;
+    max-width: 300px; 
+    margin-right: 30px;
+    min-width: 200px; 
+    max-height: 300px; 
+    min-height: 200px;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex; 
+    align-items: center; 
+    padding: 20px; 
+}
