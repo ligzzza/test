@@ -1,13 +1,14 @@
 body {
-    font-family: 'Noto Sans', sans-serif;
-    background-color:rgb(109, 181, 253);
+    font-family: 'Lobster', sans-serif;
+    background-image: url('C:/Users/galov/OneDrive/Рабочий стол/test/fon_poverhnost_piatna_50869_2560x1600.jpg');
+    background-color: rgb(109, 181, 253);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 90vh; 
     margin: 50px;
-
 }
+
 h1 {
     color: rgb(0, 27, 50);
     position: relative;
@@ -15,47 +16,44 @@ h1 {
 p {
     color: #000000;
 }
-h2 {
+h2, h3 {
     color: rgb(0, 27, 50);
 }
-h3 {
-    color: rgb(0, 27, 50);
-}
-.history{
+.history {
     text-align: justify;
-    font-size: 18px;
-    line-height: 0.9;
+    font-size: 1.5rem; /* Используйте относительные единицы измерения */
+    line-height: 1.2; /* Используйте относительные единицы измерения */
     flex: 1;
 }
-ol{
-    font-size: 18px;
+ol {
+    font-size: 1.3rem;
 }
-img + p{
+img + p {
     margin-top: 10px;
 }
-ol > li{
+ol > li {
     font-style: italic;
 }
-a:hover{
+a:hover {
     color: white;
 }
-div + p{
+div + p {
     font-weight: 700;
 }
-a{
+a {
     text-decoration: none;
 }
 .custom-image {
     border: 5px dashed #01435d;
     border-radius: 5px;
     padding: 5px;
-    width: 320px;
-    height: 250px;
-    max-width: 300px; 
+    width: 40%; /* Заменено на относительное значение */
+    height: auto; /* Автоматическая высота для сохранения пропорций изображения */
+    max-width: 50%; 
     margin-right: 30px;
     min-width: 200px; 
-    max-height: 300px; 
-    min-height: 200px;
+    max-height: 80vh; /* Установка максимальной высоты */
+    min-height: auto; /* Автоматическая высота для сохранения пропорций */
 }
 * {
     box-sizing: border-box;
@@ -63,5 +61,7 @@ a{
 .container {
     display: flex; 
     align-items: center; 
-    padding: 20px; 
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
