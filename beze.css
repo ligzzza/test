@@ -1,6 +1,6 @@
 body {
     font-family: 'Lobster', sans-serif;
-    background-image: url('C:/Users/galov/OneDrive/Рабочий стол/test/fon_poverhnost_piatna_50869_2560x1600.jpg');
+    background-image: url('./fon_poverhnost_piatna_50869_2560x1600.jpg');
     background-color: rgb(109, 181, 253);
     background-size: cover;
     background-position: center;
@@ -11,57 +11,104 @@ body {
 
 h1 {
     color: rgb(0, 27, 50);
-    position: relative;
+    position: absolute;
+    top: 10px; 
+    right: 20px;
 }
+
 p {
     color: #000000;
 }
+
 h2, h3 {
     color: rgb(0, 27, 50);
 }
+
 .history {
     text-align: justify;
-    font-size: 1.5rem; /* Используйте относительные единицы измерения */
-    line-height: 1.2; /* Используйте относительные единицы измерения */
+    font-size: 1.5rem; 
+    line-height: 1.2; 
     flex: 1;
 }
+
 ol {
     font-size: 1.3rem;
 }
+
 img + p {
     margin-top: 10px;
 }
+
 ol > li {
     font-style: italic;
+    width: 100%;             
+    max-width: 600px;      
+    min-width: 200px;
+    height: auto;           
+    max-height: 150px;
+    margin-bottom: 10px;
+    padding: 10px; 
+    
 }
+
 a:hover {
     color: white;
 }
+
 div + p {
     font-weight: 700;
 }
+
 a {
     text-decoration: none;
 }
+
 .custom-image {
     border: 5px dashed #01435d;
     border-radius: 5px;
     padding: 5px;
-    width: 40%; /* Заменено на относительное значение */
-    height: auto; /* Автоматическая высота для сохранения пропорций изображения */
-    max-width: 50%; 
+    width: 80%;        
+    height: 200px;     
     margin-right: 30px;
-    min-width: 200px; 
-    max-height: 80vh; /* Установка максимальной высоты */
-    min-height: auto; /* Автоматическая высота для сохранения пропорций */
+    object-fit: cover; 
+    object-position: center; 
 }
+
 * {
     box-sizing: border-box;
 }
+
 .container {
     display: flex; 
     align-items: center; 
     padding: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+}
+.fixed-button {
+    position: fixed;         
+    bottom: 7px;           
+    right: 20px;          
+    font-family: 'Lobster', sans-serif;
+    padding: 10px 20px;     
+    background-color: rgb(0, 27, 50); 
+    color: white;      
+    border: none;    
+    border-radius: 5px;   
+    cursor: pointer;   
+    font-size: 1rem;  
+    z-index: -10;  
+}   
+
+figure {
+    margin: 5px; 
+    text-align: center; 
+}
+
+figcaption {
+    font-size: 1rem; 
+    color: rgb(0, 27, 50); 
+    margin-top: 10px; 
+    font-style: italic; 
 }
