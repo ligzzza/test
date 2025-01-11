@@ -7,17 +7,26 @@ body {
     background-repeat: no-repeat;
     height: 90vh; 
     margin: 50px;
+    display: grid;
+    grid-template-rows: 200px 1fr 50px;  /* Три строки: заголовок, основное содержимое, нижняя часть */
+    gap: 5px
+}
+
+header {
+    color: rgb(0, 27, 50);
+    position: relative;  
+    grid-row: 1;               /* Заголовок в первой строке (начало и окончание сетки)*/
 }
 
 h1 {
     color: rgb(0, 27, 50);
-    position: absolute;
-    top: 10px; 
-    right: 20px;
+    position: relative;
+    text-align: right; 
 }
 
 p {
     color: #000000;
+    font-size: 1.2rem; 
 }
 
 h2, h3 {
@@ -28,7 +37,6 @@ h2, h3 {
     text-align: justify;
     font-size: 1.5rem; 
     line-height: 1.2; 
-    flex: 1;
 }
 
 ol {
@@ -48,7 +56,6 @@ ol > li {
     max-height: 150px;
     margin-bottom: 10px;
     padding: 10px; 
-    
 }
 
 a:hover {
@@ -67,11 +74,11 @@ a {
     border: 5px dashed #01435d;
     border-radius: 5px;
     padding: 5px;
-    width: 80%;        
+    width: 300px;        
     height: 200px;     
     margin-right: 30px;
     object-fit: cover; 
-    object-position: center; 
+    object-position: 50% 50%; 
 }
 
 * {
@@ -79,17 +86,17 @@ a {
 }
 
 .container {
-    display: flex; 
-    align-items: center; 
-    padding: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 2px;                              
+    padding: 2px;
     position: relative;
 }
+
 .fixed-button {
-    position: fixed;         
-    bottom: 7px;           
-    right: 20px;          
+    position: fixed;              
+    bottom: 7px;             
+    right: 20px;            
     font-family: 'Lobster', sans-serif;
     padding: 10px 20px;     
     background-color: rgb(0, 27, 50); 
@@ -98,11 +105,10 @@ a {
     border-radius: 5px;   
     cursor: pointer;   
     font-size: 1rem;  
-    z-index: -10;  
+    z-index: 10;  
 }   
 
 figure {
-    margin: 5px; 
     text-align: center; 
 }
 
@@ -111,4 +117,65 @@ figcaption {
     color: rgb(0, 27, 50); 
     margin-top: 10px; 
     font-style: italic; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; 
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; 
+}
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #5189e3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 7px solid #2c60ab;
+    border-radius: 50%;
+    animation: zagr 2s linear infinite, scritie 2s linear 2s forwards; /*for-сохранение состояния после окончания lin-без колебаний в скорости*/
+    position: absolute; 
+}
+
+.content {
+    opacity: 0;
+    text-align: center;
+    animation: poyavlenie 2s linear 2s forwards;
+    color: white;
+}
+
+@keyframes zagr {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes scritie {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes poyavlenie {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
