@@ -1,0 +1,157 @@
+body{
+    font-family: 'Lobster', sans-serif;
+    background-color: #fdfab2;
+}
+.box{
+    transition: transform 0.5s ease;
+}
+
+.gradient {
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+}
+
+.linear-gradient {
+    background: linear-gradient(to right, red, green);
+}
+.radial-gradient {
+    background: radial-gradient(circle, green, blue);
+}
+.conical-gradient {
+    background: conic-gradient(red, orange, yellow, green);
+}
+
+
+.transformation{
+    width: 100px;
+    height: 100px;
+    background-color: #56b0ec;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.transformation:hover{
+    transform: skew(20deg, 10deg);
+    transition: transform 0.5s ease-out; 
+}
+
+
+.transformation1{
+    width: 100px;
+    height: 20px;
+    background-color: #43c147;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.transformation1:hover{
+    transform: rotate(360deg);
+    transition: transform 0.7s ease-in; 
+}
+
+
+.transformation2{
+    width: 100px;
+    height: 100px;
+    background-color: #6d43c1;
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+.transformation2:hover{
+    transform: rotate3d(1, 1, 1, 360deg);
+    transition: transform 1s ease; 
+}
+
+
+.transformation3{
+    width: 170px;
+    height: 100px;
+    background-color: #6d43c1;
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: all 3s ease; 
+}
+.transformation3:hover{
+    transform: scale3d(1.5, 1.5, 1.5);
+    color: #9f0a0a;  
+}
+
+
+.full-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    perspective: 1000px; /* Определяет расстояние до объекта 3D */
+}
+.transition {
+    font-size: 2rem; 
+    color: rgb(45, 129, 238);
+    padding: 20px;
+    border-radius: 10px; 
+    transform-style: preserve-3d; /* Сохраняет 3D-стили для дочерних элементов */
+    animation: flip 2s infinite; /* Анимация */
+}
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg); /* Начальное состояние */
+    }
+    100% {
+        transform: rotateY(360deg); /
+    }
+}
+
+.transition1{
+    position: relative;
+    width: 200px;
+    height: 50px; 
+    line-height: 50px; /* Центрирование по вертикали */
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background-color: #3498db; 
+    border-radius: 10px;
+    transform-style: preserve-3d; /* Сохраняет 3D-стили для элементов потом */
+    animation: flip 5s infinite; /* Анимация инверсии */
+}
+.transition1:hover{
+    background-color: #9f0a0a;
+}
+.circle {
+    width: 400px;
+    height: 400px; 
+    border-radius: 50%; /* Чтобы сделать его круглым */
+    position: relative; 
+    margin: 0 auto; 
+    animation: rotate 5s linear infinite; /* Анимация вращения */
+}
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg); 
+    }
+    50% {
+        transform: rotateY(180deg); /* Половина анимации (инверсия) */
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg); 
+    }
+}
