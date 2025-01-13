@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация пользователя</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Регистрация нового пользователя</h1>
+        <nav>
+            <ul>
+                <li><a href="beze.html">На главную</a></li>
+                <li><a href="mailto:galova.liza06@gmail.com">Связаться с нами</a></li>
+                <li><a href="tel:89651124676">Позвонить</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="/submit_registration" method="POST">
+            <fieldset>
+                <legend>Личная информация</legend>
+
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+                <label for="dob">Дата рождения:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label>Пол:</label>
+                <div>
+                    <input type="radio" id="option1" name="options" />
+                    <label for="option1">Мужской</label>
+                
+                    <input type="radio" id="option2" name="options" />
+                    <label for="option2">Женский</label>
+                </div>
+
+            
+
+                <br><br> <!-- Добавляем перенос строки для отделения полей -->
+                
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Контактные данные</legend>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+
+                <label for="contact_time">Удобный интервал для связи:</label>
+                <select id="contact_time" name="contact_time">
+                    <option value="morning">Утро</option>
+                    <option value="day">День</option>
+                    <option value="evening">Вечер</option>
+                    <option value="night">Ночь</option>
+                </select>
+
+                <label>
+                    <input type="checkbox" id="notifications" name="notifications">
+                    Хочу получать уведомления по электронной почте
+                </label>
+
+                <button type="submit">Зарегистрироваться</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2023 Мой Сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>
