@@ -74,20 +74,20 @@ main {
     background-color: #a7a7a7;
 }
 
-.popular, .news, .categories {
+.popular, .news  {
     padding: 2rem 0;
 }
 
-.popular h2, .news h2, .categories h2 {
+.popular h2, .news h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.popular1, .news, .categories {
-    padding: 2rem 5rem 10% 5rem;
+.popular1, .news {
+    padding: 2rem 5rem 5% 5rem;
 }
   
-.popular1 h2, .news h2, .categories h2 {
+.popular1 h2, .news h2 {
     text-align: center;
     margin-bottom: 1.5rem;
 }
@@ -288,33 +288,55 @@ main {
 .news-item h3{
     font-size: 1.5rem;
 }
-/*
-.category-list {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
 
-.category-list li {
-    margin: 10px 0;
-}
-
-.category-list li a {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: white;
-}
-
-.category-list li a:hover {
-    background: #f0f0f0;
-    text-decoration: none;
-}
-*/
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 0.5rem 0;
+}
+
+.popular1 .container{
+    background-color: white;
+    width: 85%;
+    margin: 20px 20px;
+    max-width: 1300px;
+    padding: 30px;
+    border-radius: 20px;
+    text-indent: 20px;
+    text-align: justify;
+}
+.popular1 .container img{
+    height: 300px;
+    width: 400px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.popular1 .container p{
+    font-size: 20px;
+}
+
+.popular1 .container1{
+    background-color: white;
+    width: 85%;
+    max-width: 1300px;
+    border-radius: 20px;
+}
+
+.popular1 .container1 img{
+    height: 200px;
+    width: 300px;
+    float: right;
+    margin-left: 40px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+.popular1 .container1 p{
+    font-size: 19px;
 }
